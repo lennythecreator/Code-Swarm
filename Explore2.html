@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Planets</title>
+    <link rel="stylesheet" href="Explore.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Home.html">App</a></li>
+            <li><a href="User.html">Profile</a></li>
+        </ul>
+       
+    </nav>
+
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+            <div class="card" style="width: 250 px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Mercury.jpeg" class="card-img-top" alt="Mercury" height="160" style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Mercury</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#mercuryModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+        <!-- Mercury Modal -->
+        <div class="modal fade" id="mercuryModal" tabindex="-1" role="dialog" aria-labelledby="mercuryModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mercuryModalLabel">Mercury Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Mercury, the innermost planet, experiences extreme temperature fluctuations due to its lack of atmosphere. With daytime temperatures soaring to around 800 degrees Fahrenheit (427 degrees Celsius) and nighttime temperatures plummeting to -290 degrees Fahrenheit (-179 degrees Celsius), its surface is covered in craters and plains.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="venus.jpg" class="card-img-top" alt="Venus"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Venus</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#venusModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- venus Modal -->
+        <div class="modal fade" id="venusModal" tabindex="-1" role="dialog" aria-labelledby="venusModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="venusModalLabel">Venus Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Often referred to as Earth's twin, Venus has a thick atmosphere primarily composed of carbon dioxide with clouds of sulfuric acid. The greenhouse effect on Venus makes it the hottest planet in our solar system, with surface temperatures reaching up to 900 degrees Fahrenheit (475 degrees Celsius).</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Earth.jpeg" class="card-img-top" alt="Earth" height="160"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Earth</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#earthModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="earthModal" tabindex="-1" role="dialog" aria-labelledby="earthModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="earthModalLabel">Earth Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The only known planet supporting a vast array of life, Earth boasts diverse ecosystems, oceans, and a life-sustaining atmosphere. Its unique features include a magnetic field that protects life from harmful solar radiation and a dynamic climate system.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Mars.jpg" class="card-img-top" alt="Earth" height="160"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Mars</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#marsModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="marsModal" tabindex="-1" role="dialog" aria-labelledby="marsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="marsModalLabel">Mars Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mars, the "Red Planet," exhibits a rusty color due to iron oxide on its surface. It features the largest volcano, Olympus Mons, and the deep canyon Valles Marineris. Ongoing exploration focuses on potential signs of past microbial life.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Jupiter.jpg" class="card-img-top" alt="Earth"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Jupiter</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#jupiterModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="jupiterModal" tabindex="-1" role="dialog" aria-labelledby="jupiterModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jupiterModalLabel">Jupiter Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Jupiter, the largest gas giant, possesses a strong magnetic field and a colossal storm, the Great Red Spot. It has over 70 moons, with the four largest—Io, Europa, Ganymede, and Callisto—known as the Galilean moons.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Saturn_during_Equinox.jpg" class="card-img-top" alt="Earth" height="150"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Saturn</h5>
+                    <button class="btn btn-primary" type="submit"data-bs-toggle="modal" data-bs-target="#saturnModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="saturnModal" tabindex="-1" role="dialog" aria-labelledby="saturnModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="saturnModalLabel">Saturn Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Saturn is renowned for its stunning ring system, composed of icy particles and rock debris. The rings, made up of countless individual ringlets, orbit the planet and contribute to Saturn's captivating appearance.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Uranus.jpg" class="card-img-top" alt="Earth" height="160"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Uranus</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#uranusModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="uranusModal" tabindex="-1" role="dialog" aria-labelledby="uranusModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="uranusModalLabel">Uranus Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Uranus, a distant "ice giant," stands out in our solar system due to its unique axial tilt—tilted on its side at nearly a right angle. This extreme tilt, possibly caused by a past collision, results in peculiar seasons where each pole experiences about 20 years of continuous sunlight or darkness during its 84-year orbit. The bluish hue of Uranus comes from its atmosphere's methane content, which absorbs red light, leaving behind the blue spectrum. Unlike the gas giants, Uranus has a subdued appearance, lacking the vibrant cloud bands seen on Jupiter and Saturn. Its rotational pattern is distinctive, with the planet's magnetic poles significantly misaligned from its rotational axis. Uranus also hosts a system of faint rings, discovered in 1977, comprising 13 known ringlets.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="col">
+            <div class="card" style="width: 250px; height: 300px; border-radius: 25px;margin: 10px;">
+                <img src="Neptune.jpg" class="card-img-top" alt="Earth" height="160"style="border-radius: 25px;">
+                <div class="card-body">
+                    <h5 class="card-title">Neptune</h5>
+                    <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#neptuneModal">Learn More</button>
+                </div>
+            </div>
+        </div>
+    <!-- Repeat the following modal structure for each planet -->
+    <!-- Mercury Modal -->
+    <div class="modal fade" id="neptuneModal" tabindex="-1" role="dialog" aria-labelledby="neptuneModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="neptuneModalLabel">Mercury Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>As the farthest gas giant from the Sun, Neptune presents a captivating and dynamic atmosphere. Its vibrant blue color is a result of the presence of methane, similar to Uranus. Neptune experiences intense winds, with speeds reaching up to 1,500 miles per hour (2,400 kilometers per hour)—the fastest recorded in the solar system. Notable storm systems, such as the Great Dark Spot, contribute to Neptune's turbulent weather patterns. Although the Great Dark Spot observed by the Voyager 2 spacecraft in 1989 has since disappeared, new storm systems and atmospheric features continue to be discovered. Neptune also has a system of rings, though they are faint and challenging to observe. The planet's overall composition, weather dynamics, and unique features make it a fascinating object of study in our cosmic neighborhood.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Continue for other planets... -->
+
+    </div>
+</div>
+
+<!-- Add jQuery first -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/tfS1qXGi8rZ+YvE+K5q5Z1bNN4Ec5gY8tRaxU=" crossorigin="anonymous"></script>
+<!-- Then, add Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

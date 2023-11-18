@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a; /* Dark space background color */
+            color: #fff; /* Light text color */
+        }
+
+        /* Space image at the top */
+        .space-image {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+
+        /* Center the flex container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Welcome text styling */
+        .welcome-text {
+            font-size: 36px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .sub-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Flex container for the three divs */
+        .flex-container {
+            display: flex;
+            margin: 20px 0;
+            justify-content: space-around;
+            max-width: 800px; /* Adjust the maximum width as needed */
+            flex-wrap: wrap;
+        }
+
+        /* Individual flex div */
+        .flex-item {
+            width: 200px; /* Set the width as needed */
+            height: 200px; /* Make it square-shaped */
+            text-align: center;
+            border: 2px solid #28a745;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            background-color: #0a0a0a; /* Dark space background color */
+            color: #fff; /* Light text color */
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        /* Style on hover */
+        .flex-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Green play button */
+        .play-button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: background-color 0.3s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0; /* Initially hidden */
+        }
+
+        /* Amount of questions displayed small under the topic */
+        .questions-info {
+            font-size: 14px;
+            color: #28a745;
+            margin-top: 8px;
+            opacity: 0; /* Initially hidden */
+        }
+
+        /* Show the play button and questions-info only when hovered */
+        .flex-item:hover .play-button,
+        .flex-item:hover .questions-info {
+            opacity: 1;
+        }
+
+        /* Background image for each div */
+        .flex-item:nth-child(1) {
+            background-image: url('assets/solarsystem.jpg');
+            background-size: cover;
+        }
+
+        .flex-item:nth-child(2) {
+            background-image: url('assets/missions.jpg');
+            background-size: cover;
+        }
+
+        .flex-item:nth-child(3) {
+            background-image: url('assets/blackhole.jpg');
+            background-size: cover;
+        }
+
+        /* Improved Typography */
+        h3 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Space image at the top -->
+    <img class="space-image" src="https://source.unsplash.com/1600x600/?interstellar" alt="Interstellar Space">
+
+    <!-- Centered flex container for the three divs -->
+    <div class="container">
+        <!-- Welcome Text -->
+        <div class="welcome-text">Welcome to Interstellar Adventures</div>
+        <div class="sub-text">Test your knowledge on the wonders of the universe.</div>
+        <!-- Flex container for the three divs -->
+        <div class="flex-container">
+            <!-- First flex item -->
+            <div class="flex-item">
+                <a href="quizzes/exploreQuiz.html" target="_blank">
+                    <div class="play-button">&#9654;</div>
+                    <h3>Explore Space</h3>
+                    <p class="questions-info">5 Questions</p>
+                </a>
+            </div>
+
+            <!-- Second flex item -->
+            <div class="flex-item">
+                <a href="quizzes/missionsQuiz.html" target="_blank">
+                    <div class="play-button">&#9654;</div>
+                    <h3>Space Mission</h3>
+                    <p class="questions-info">5 Questions</p>
+                </a>
+            </div>
+
+            <!-- Third flex item -->
+            <div class="flex-item">
+                <a href="quizzes/phenomenaQuiz.html" target="_blank">
+                    <div class="play-button">&#9654;</div>
+                    <h3>Phenomena</h3>
+                    <p class="questions-info">5 Questions</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (at the end of the body for better performance) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

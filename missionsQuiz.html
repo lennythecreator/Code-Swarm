@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Quiz</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="quizzes.css">
+
+</head>
+<body>
+
+<div class="container quiz-container" id="quiz-container">
+  <!-- Questions will be dynamically added here using JavaScript -->
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  // Your JavaScript code for the quiz
+  const quizData = {
+    "questions": [
+      {
+        "question": "What is the name of the first woman to travel to space?",
+        "options":["Yuri Gagarin", "Valentina Tereshkova", "Sally Ride", "Mae Jemison"],
+        "correctAnswer": "Valentina Tereshkova"
+      },
+      {
+        "question": "Which space shuttle was the first to orbit the Earth?",
+        "options": ["Discovery", "Columbia", "Atlantis", "Challenger"],
+        "correctAnswer": "Columbia"
+      },
+      {
+        "question": "What was the name of the first artificial satellite launched into space?",
+        "options":["Vostok 1", "Sputnik 1", "Explorer 1", "Hubble Space Telescope"],
+        "correctAnswer": "Sputnik 1"
+      },
+      {
+        "question": "Which space agency successfully landed the first humans on the Moon?",
+        "options": ["2010", "2012", "2014", "2016"],
+        "correctAnswer": "2012"
+      },
+      {
+        "question": "In which year did the Mars Rover 'Curiosity' land on Mars?",
+        "options": ["NASA", "ESA", "Roscosmos", "ISRO"],
+        "correctAnswer": "NASA"
+      },
+    ]
+  };
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  function renderQuestion() {
+    const quizContainer = document.getElementById('quiz-container');
+    const currentQuestionData = quizData.questions[currentQuestion];
+
+    if (!currentQuestionData) {
+      // No more questions, show the final score
+      showResult();
+      return;
+    }
+
+    const questionDiv = document.createElement('div');
+    questionDiv.classList.add('question');
+
+    const questionElement = document.createElement('p');
+    questionElement.textContent = currentQuestionData.question;
+    questionDiv.appendChild(questionElement);
+
+    const optionsDiv = document.createElement('div');
+    optionsDiv.classList.add('options');
+
+    currentQuestionData.options.forEach((option, index) => {
+      const optionButton = document.createElement('button');
+      optionButton.classList.add('btn', 'btn-dark', 'option');
+      optionButton.textContent = option;
+      optionButton.addEventListener('click', () => checkAnswer(option));
+      optionsDiv.appendChild(optionButton);
+    });
+
+    questionDiv.appendChild(optionsDiv);
+    quizContainer.innerHTML = '';
+    quizContainer.appendChild(questionDiv);
+  }
+ 
+
+
+  function checkAnswer(userAnswer) {
+    const currentQuestionData = quizData.questions[currentQuestion];
+
+    if (userAnswer === currentQuestionData.correctAnswer) {
+        // Correct answer
+        score++;
+
+        // Add celebration class
+        const quizContainer = document.getElementById('quiz-container');
+        quizContainer.classList.add('answer-correct');
+        
+        // Reset the class after a short delay
+        setTimeout(() => {
+            quizContainer.classList.remove('answer-correct');
+            // Move to the next question
+            currentQuestion++;
+            renderQuestion();
+        }, 1000);
+    } else {
+        // Incorrect answer, move to the next question directly
+        currentQuestion++;
+        renderQuestion();
+    }
+}
+
+  function showResult() {
+    const quizContainer = document.getElementById('quiz-container');
+    quizContainer.innerHTML = `<p id="result">Your score is: ${score} out of ${quizData.questions.length}</p>`;
+
+    const actionButtonsDiv = document.createElement('div');
+    actionButtonsDiv.classList.add('action-buttons');
+
+    const replayButton = document.createElement('button');
+    replayButton.classList.add('btn', 'btn-dark', 'action-button');
+    replayButton.textContent = 'Replay Quiz';
+    replayButton.addEventListener('click', () => {
+      currentQuestion = 0;
+      score = 0;
+      renderQuestion();
+    });
+
+    const homeButton = document.createElement('button');
+    homeButton.classList.add('btn', 'btn-dark', 'action-button');
+    homeButton.textContent = 'Go to Home Page';
+    homeButton.addEventListener('click', () => {
+      // Redirect to the home page or take appropriate action
+      window.location.href = 'home.html';
+    });
+
+    actionButtonsDiv.appendChild(replayButton);
+    actionButtonsDiv.appendChild(homeButton);
+    quizContainer.appendChild(actionButtonsDiv);
+  }
+
+  // Initial render
+  renderQuestion();
+</script>
+
+</body>
+</html>

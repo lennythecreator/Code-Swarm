@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-image: url(Background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+nav{
+    
+}
+nav ul{
+    font-size: 20px;
+    font-weight: 600;
+    top:10px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    list-style: none;
+    background-color: rgba(0,0,0, 0.7);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    display: flex;
+   
+    
+}
+
+nav ul li{
+    padding-top: 20px;
+    margin: 0 30px;
+    width: 120px;
+    text-align: center;
+    
+}
+
+nav ul a{
+    text-decoration: none;
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    padding: 3rem;
+    justify-content: space-around; /* Adjust this as needed */
+    text-align: center;
+    overflow-y: scroll;
+}
+.card-list::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+
+.card-list::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+}
+
+.card-list::-webkit-scrollbar-track{
+
+}
+
+.card{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    height: 300px;
+    width: 400px;
+    min-width: 200px;
+    margin: 10px;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(76, 77, 77);
+    border-radius: 35px;
+    box-shadow: -1rem;
+    
+    opacity: 0;
+    transition: transform 0.3s ease;
+    background-color: bisque;
+}
+.card h1, .card p {
+    margin-bottom: 15px; /* Add margin between h1, p, and button */
+  }
+
+button{
+    font-size: 25px;
+    border-radius: 35px;
+    width: 150px;
+    padding: 10px;
+
+}
+.card:hover {
+    transform: translateY(-1rem) scale(1.05);
+    
+}
+
+/* Define the keyframes for the fly-in animation */
+.card:nth-child(1) {
+    animation: flyIn 0.8s ease-in-out forwards 0.1s;
+  }
+  
+  .card:nth-child(2) {
+    animation: flyIn 0.8s ease-in-out forwards 1s;
+  }
+  
+  .card:nth-child(3) {
+    animation: flyIn 0.8s ease-in-out forwards 1.9s;
+  }
+  
+  .card:nth-child(4) {
+    animation: flyIn 0.8s ease-in-out forwards 2.8s;
+  }
+  
+  @keyframes flyIn {
+    from {
+      transform: translateY(-50px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

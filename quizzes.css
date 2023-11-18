@@ -1,0 +1,99 @@
+/* Add this CSS for celebration animation */
+@keyframes celebration {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.celebration {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 20px;
+    color: #28a745;
+    opacity: 0;
+    animation: celebration 1s ease-out;
+}
+
+.answer-correct .celebration {
+    opacity: 1;
+}
+
+body {
+    color: #fff;
+    transition: background 0.5s ease;
+    background: url('https://source.unsplash.com/1600x900/?space') center/cover no-repeat fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .question {
+    margin-bottom: 20px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .option {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .option:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .action-button {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .action-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* Add more styles as needed */
